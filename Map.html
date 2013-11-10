@@ -20,8 +20,8 @@
  
  <link rel="stylesheet" href="css/jquery-ui-1.8.20.custom.css" type="text/css" media=screen>
  <script type="text/javascript" src="js/vendor/jquery-1.7.2.min.js"></script> 
- <script src="js/vendor/jquery-ui-1.8.20.custom.min.js"></script>
-s
+  <script src="js/vendor/jquery-ui-1.8.20.custom.min.js"></script>
+
 
  <form id = "simData" method = "POST" action = "SimResponse.php">
      <input type = "hidden" name = "network" id = "network" value = ""/>
@@ -29,6 +29,7 @@ s
      <input type = "hidden" name = "passengers" id = "passengers" value = ""/>
      <input type = "hidden" name = "passengerRegions" id = "passengerRegions" value = ""/>
  </form>
+
 
  <div id = "Textbox"></div>
  <div id = "toolBox">
@@ -40,37 +41,6 @@ s
 </div>
 
 
-<!-- jQuery UI stuff -->
-
-<div id = "rangeSliders" style = "display:none">
-  <p>
-    <label for="range">Range:</label>
-    <input type="text" id="range" style="border:0; color:#f6931f; font-weight:bold;" />
-  </p>
-  <p>
-    <label for="interval">Interval:</label>
-    <input type="text" id="interval" style="border:0; color:#f6931f; font-weight:bold;" value = "50" />
-  </p>
-  <div id="slider-range" "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
-</div>
-
-<div id = "aSlider" class ="oneSlider">
-  <p>
-    <label for="amount">How many passengers : </label>
-    <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
-  </p>
-  <div id="slider-range-min" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
-</div>
-<div id="sliders">
-</div>
-
-<div id = "singlePassengerSlider" class ="oneSlider" style = "display:none">
-  <p>
-    <label for="passengerTime">When ? </label>
-    <input type="text" id="passengerTime" style="border:0; color:#f6931f; font-weight:bold;" />
-  </p>
-  <div id="slider-range-passenger" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
-</div>
 
 
 <!--  Global Variables -->
