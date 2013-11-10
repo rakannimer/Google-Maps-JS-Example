@@ -7,7 +7,8 @@ var myOptions = {
           center: new google.maps.LatLng(33.878041,35.521769),
           zoom: 14,
           overviewMapControl: true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          disableDoubleClickZoom: true
         };
 
 //Show Map        
@@ -32,7 +33,7 @@ drawingManager = new google.maps.drawing.DrawingManager({
 		
     drawingControlOptions: {
 			position: google.maps.ControlPosition.TOP_CENTER, // Change to RIGHT_CENTER
-			drawingModes: [google.maps.drawing.OverlayType.MARKER]
+			drawingModes: [google.maps.drawing.OverlayType.MARKER,google.maps.drawing.OverlayType.POLYLINE, google.maps.drawing.OverlayType.POLYGON]
 		},
 
     markerOptions: {
@@ -47,7 +48,6 @@ drawingManager = new google.maps.drawing.DrawingManager({
       strokeWeight: 0.8,
       strokeOpacity: 1,
       fillColor : "#58cbf4",
-      clickable: false,
       zIndex: 1,
       editable: true
   }  ,
@@ -65,6 +65,13 @@ drawingManager = new google.maps.drawing.DrawingManager({
         strokeOpacity:0.3,
         strokeWeight:5,
         editable:true
+  },
+   polygonOptions: {
+        strokeColor:'#FF0000',
+        strokeOpacity:0.3,
+        strokeWeight:5,
+        editable:true,
+        fillColor : "#58cbf4",
   }
 	});
 
