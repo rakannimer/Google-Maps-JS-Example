@@ -26,6 +26,8 @@ Features
 
 Introductory Deck : http://slid.es/rakannimer/building-an-app-with-google-maps
 
+Use the autocomplete searchbox to center map on a given city or address.
+
 Draw a rectangle by clicking on the rectangle in the toolbox, drawing the rectangle then double clicking to confirm drawing
 
 Same goes for circles
