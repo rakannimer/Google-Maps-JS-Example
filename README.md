@@ -18,7 +18,7 @@ Using the code to build stuff with Google Maps
 [Fork](https://help.github.com/articles/fork-a-repo) the repo, make it better for other people to use.
 
 Use it for your business, for your fun project  remove the code you don't need. Add the features you do need. 
-And tell us about it if you want so we can put a link to your website here as a testament to cool things that can be done with maps.
+And tell me about it if you want so I can put a link to your website here as a testament to cool things that can be done with maps.
 
 
 Features
