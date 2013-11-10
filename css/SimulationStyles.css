@@ -1,0 +1,109 @@
+html 
+{ 
+	height: 100% 
+}
+
+body 
+{ 
+	height: 100%; 
+	margin: 0; 
+	padding: 0 
+}
+
+#map_canvas
+{
+	position: absolute;
+	z-index : 0;
+	top:0;
+	height: 100%; 
+	width : 100%;
+	clear:both;
+}
+
+#Container
+{
+	position : relative;
+	z-index:1;
+}
+
+#Title
+{
+	text-align : center;
+	background-image: url("../img/WhiteBg.png");
+	margin : 0 auto;
+	margin-top : 50px;
+	width : 300px;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	color :#787576;
+	font-size:20px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding : 15px
+}
+
+#LoginForm
+{
+	background-image: url("../img/WhiteBg.png");
+	width : 500px;
+	margin: 0 auto;
+	margin-top : 130px;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	
+	
+}
+
+.RoundedBox
+{
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	padding-top : 30px;
+	padding-bottom : 30px;
+}
+
+.TextField
+{
+	width : 200px;
+	text-align :center;
+	color : black; /*#787576;*/
+	margin-left: 140px;
+	margin-right: 130px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+
+#toolBox
+{
+	display:inline-block;
+	border: solid 1px #A6BDE1; /*58cbf4;*/
+	background:white;
+}
+#toolList
+{	
+	list-style-type :none;
+	padding:0;
+	margin:0;
+}
+#toolList .tool
+{
+	padding :5px;
+	text-align:center;
+	border : solid 1px #A6BDE1;
+}
+
+#searchbox
+{
+	width:25%;
+	height:20px; 
+	font-size:15px; 
+	margin-left: 9%; 
+	margin-top:5px; 
+	margin-bottom :10px;
+	float: 'left'; 
+	position:absolute; 
+	z-index:1;
+}
