@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Select Network</title>
+  <title></title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
   <link rel="stylesheet" href="css/SimulationStyles.css" type="text/css" media=screen>  
@@ -18,10 +18,10 @@
  src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDfwid_BFwpcD6INzOJQE39yq9JFK0qB84&sensor=false&libraries=drawing,places">
  </script>
  
- <link rel="stylesheet" href="js/jquery-ui-1.8.20.custom/css/ui-lightness/jquery-ui-1.8.20.custom.css" type="text/css" media=screen>
- <script type="text/javascript" src="js/jquery-ui-1.8.20.custom/js/jquery-1.7.2.min.js"></script> 
- <script src="js/jquery-ui-1.8.20.custom/js/jquery-ui-1.8.20.custom.min.js"></script>
-
+ <link rel="stylesheet" href="css/jquery-ui-1.8.20.custom.css" type="text/css" media=screen>
+ <script type="text/javascript" src="js/vendor/jquery-1.7.2.min.js"></script> 
+ <script src="js/vendor/jquery-ui-1.8.20.custom.min.js"></script>
+s
 
  <form id = "simData" method = "POST" action = "SimResponse.php">
      <input type = "hidden" name = "network" id = "network" value = ""/>
@@ -36,7 +36,7 @@
      <li class="tool" id ="DrawNetwork"><img src="img/NetworkIcon.png" alt = "Select Simulation Area"/></li>
      <li class="tool" id = "PutPassenger"><img src="img/person.png" alt = "Put Passengers on map" width ="20" height="30" /></li>
      <li class="tool" id = "PutPassengerRegion"><img src="img/passengerRegion.png" alt = "Put Passengers in region" /></li>
-     <li class="tool" id = "PutTaxi"><img src="img/taxiIcon.png" width ="25" height="30" alt = "Put Taxi on map" /></li>	
+     <li class="tool" id = "PutTaxi"><img src="img/taxiIcon.png" width ="25" height="30" alt = "Put Taxi on map" /></li>  
  </ul>
 </div>
 
@@ -44,64 +44,52 @@
 <!-- jQuery UI stuff -->
 
 <div id = "rangeSliders" style = "display:none">
-	<p>
-		<label for="range">Range:</label>
-		<input type="text" id="range" style="border:0; color:#f6931f; font-weight:bold;" />
-	</p>
-	<p>
-		<label for="interval">Interval:</label>
-		<input type="text" id="interval" style="border:0; color:#f6931f; font-weight:bold;" value = "50" />
-	</p>
-	<div id="slider-range" "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+  <p>
+    <label for="range">Range:</label>
+    <input type="text" id="range" style="border:0; color:#f6931f; font-weight:bold;" />
+  </p>
+  <p>
+    <label for="interval">Interval:</label>
+    <input type="text" id="interval" style="border:0; color:#f6931f; font-weight:bold;" value = "50" />
+  </p>
+  <div id="slider-range" "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
 </div>
 
 <div id = "aSlider" class ="oneSlider">
-	<p>
-		<label for="amount">How many passengers : </label>
-		<input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
-	</p>
-	<div id="slider-range-min" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+  <p>
+    <label for="amount">How many passengers : </label>
+    <input type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;" />
+  </p>
+  <div id="slider-range-min" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
 </div>
 <div id="sliders">
 </div>
 
 <div id = "singlePassengerSlider" class ="oneSlider" style = "display:none">
-	<p>
-		<label for="passengerTime">When ? </label>
-		<input type="text" id="passengerTime" style="border:0; color:#f6931f; font-weight:bold;" />
-	</p>
-	<div id="slider-range-passenger" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
+  <p>
+    <label for="passengerTime">When ? </label>
+    <input type="text" id="passengerTime" style="border:0; color:#f6931f; font-weight:bold;" />
+  </p>
+  <div id="slider-range-passenger" class = "slider-range-min ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"></div>
 </div>
-
-<!-- jQuery UI stuff -->
 
 
 <!--  Global Variables -->
-<script type = "text/javascript">
-    var geocoder = new google.maps.Geocoder();
-    var directionsDisplay = new google.maps.DirectionsRenderer();
-    var map;
-
-    var Beirut = new google.maps.LatLng(33.889299,35.495479);
-    var networkDrawn = false;
-    var drawingManager;
-    var currentPassengerSource;
-</script>
-
+<script type = "text/javascript" src ="js/components/Globals.js" ></script>
 <!--  Auto Complete Text box -->
-<script type = "text/javascript" src ="js/AutoComplete.js" ></script>
+<script type = "text/javascript" src ="js/components/AutoComplete.js" ></script>
 <!-- Map setup -->
-<script type = "text/javascript" src =	"js/MapSetup.js"></script>
+<script type = "text/javascript" src =  "js/components/MapSetup.js"></script>
 <!--  Buttons Creation -->
-<script type ="text/javascript" src = "js/CreateButtons.js"></script> 
+<script type ="text/javascript" src = "js/components/CreateButtons.js"></script> 
 <!-- Handle Events -->
-<script type ="text/javascript" src ="js/EventHandlers.js"></script>  
+<script type ="text/javascript" src ="js/components/EventHandlers.js"></script>  
 <!-- Listen to events -->
-<script type ="text/javascript" src ="js/EventListeners.js"></script>
+<script type ="text/javascript" src ="js/components/EventListeners.js"></script>
 
 
 <script type = "text/javascript">
-    $("#aSlider").hide();		
+    $("#aSlider").hide();   
 </script>
 </body>
 </html>
